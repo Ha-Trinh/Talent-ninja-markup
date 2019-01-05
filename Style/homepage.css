@@ -595,7 +595,6 @@ footer a {
   line-height: 30px;
   color: rgb(129, 132, 150);
 }
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -609,7 +608,6 @@ footer a {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -618,7 +616,6 @@ footer a {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
-
 /* The Close Button */
 .close {
   color: #aaa;
@@ -626,14 +623,72 @@ footer a {
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
+.carousel {
+  position: relative;
+}
+/* .carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+} */
+.carousel-item {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  perspective: 1000px;
+  backface-visibility: hidden;
+  display: none;
 
+}
+.carousel-iten:active {
+  display: block;
+  transition: transform .6s ease,-webkit-transform .6s ease;
+}
+#carousel-wrapper {
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+#button-previous {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  width: auto;
+  margin-top: -15px;
+  padding: 16px;
+  color: #c1c1c1;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+}
+#button-next {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  width: auto;
+  margin-top: -15px;
+  padding: 16px;
+  color: #c1c1c1;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  right: 0;
+  border-radius: 50%;
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+}
 @media (min-width: 768px) {
   .flex-md-row {
       -ms-flex-direction: row!important;
