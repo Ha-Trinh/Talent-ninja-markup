@@ -1,0 +1,17 @@
+.content {
+  width: 70%;
+  margin: auto;
+  padding-top: 50px;
+}
+.banner img {
+  width: 100%;
+}
+.title h1 {
+  color: #03ac34;
+  font-size: 36px;
+  line-height: 50px;
+}
+.element p {
+  margin: 0 0 25px 0;
+  font-size: 16px;
+}
