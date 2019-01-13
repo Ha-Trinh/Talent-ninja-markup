@@ -19,6 +19,12 @@
 #navbar {
   margin-top: 40px;
 }
+body {
+  font-family: Helvetica,Sans-Serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5em;
+}
 h5 {
   font-family: "Proxima Nova RG", sans-serif;
   font-weight: 400;
@@ -344,6 +350,7 @@ img {
   box-shadow: 0px 4px 20px 0 rgba(23 , 42 ,89 , 0.17);
 }
 .card {
+  padding-bottom: 1.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -356,12 +363,14 @@ img {
 .card-body {
   flex: 1 1 auto;
   padding: 1.25rem;
+  margin-top: 20px;
 }
 .card-body .card-title {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
 }
 .card-title {
+  font-family: "Proxima Nova bold", sans-serif;
   margin-bottom: .75rem;
 }
 .card-text:last-child {
@@ -370,13 +379,17 @@ img {
 .card-body p {
   line-height: 27px;
   text-align: center;
-  font-family: "Proxima Nova RG", sans-serif;
+  font-family: "Proxima Nova Regular", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
   color: rgb(140, 142, 157);
 }
+.card-body img {
+  margin: 0 0 25px 0;
+}
 .btn-success {
+  padding: 1.5rem !important;
   background-color: rgba(70, 173, 38, 1);
   width: 276px;
   height: 56px;
@@ -389,6 +402,9 @@ img {
 .bg-light {
   background-color: rgba(247,247,247,1) !important;
   color: #333;
+}
+.bg-light .block-content div p {
+  margin: 0 0 25px 0;
 }
 .section {
   padding: 2rem 0;
@@ -405,6 +421,12 @@ section#clients {
   text-align: center;
   line-height: 31px;
 }
+section#TalentNinja .pricing-header h1,
+section#features .pricing-header h1 {
+  line-height: 50px;
+  color: #818496;
+  margin-bottom: 15px;
+}
 section#features {
   height: 757px;
   color: #aeb1c0;
@@ -417,6 +439,11 @@ section#features .container {
 }
 
 #tab-wrapper {
+  color: #AEB1C0;
+  font-family: 'Proxima Nova RG', sans-serif;
+  font-size: 18px;
+  padding-bottom: 20px;
+  line-height: 30px;
   list-style: none;
   position: relative;
   padding: 0;
@@ -595,6 +622,10 @@ footer a {
   line-height: 30px;
   color: rgb(129, 132, 150);
 }
+footer a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -617,26 +648,62 @@ footer a {
   width: 80%; /* Could be more or less, depending on screen size */
 }
 /* The Close Button */
-.close {
+.close,
+.closePrivacy {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 .close:hover,
-.close:focus {
+.close:focus,
+.closePrivacy:hover,
+.closePrivacy:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
+.field {
+  background: #ebebeb;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.modal-header {
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #464646;
+}
+.modal-body {
+  color: #464646;
+  font-size: 14px;
+  font-weight: 500;
+  height: 350px;
+  overflow: hidden;
+  padding: 25px;
+}
+.term-of-service-body {
+  height: 350px;
+  overflow-y: scroll;
+  padding-right: 25px;
+}
+.modal-body .text-header3 {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+/* slider */
 .carousel {
   position: relative;
 }
-/* .carousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-} */
 .carousel-item {
   position: relative;
   align-items: center;
@@ -689,6 +756,7 @@ footer a {
     outline: 0;
     opacity: .9;
 }
+
 @media (min-width: 768px) {
   .flex-md-row {
       -ms-flex-direction: row!important;
