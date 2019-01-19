@@ -367,11 +367,11 @@
       <div id="myBtnContainer">
         <ul class="container" id="tab-wrapper">
           <li class="active" onclick="filterSelection('signup')"><a href="#tab1"><i class="fa fa-user"></i>SIGN UP</a></li>
-          <li onclick="filterSelection('dashboard')"><a href="#tab1"><i class="fas fa-cogs"></i>DASHBOARD</a></li>
-          <li onclick="filterSelection('jobs')"><a href="#tab2"><i class="fa fa-briefcase"></i>JOBS</a></li>
-          <li onclick="filterSelection('candidates')"><a href="#tab3"><i class="fa fa-id-badge"></i>CANDIDATES</a></li>
-          <li onclick="filterSelection('boots')"><a href="#tab4"><i class="fa fa-rocket"></i>BOOST</a></li>
-          <li onclick="filterSelection('careers')"><a href="#tab5"><i class="fab fa-black-tie"></i>CAREERS PAGE</a></li>
+          <li onclick="filterSelection('dashboard')"><a href="#tab2"><i class="fas fa-cogs"></i>DASHBOARD</a></li>
+          <li onclick="filterSelection('jobs')"><a href="#tab3"><i class="fa fa-briefcase"></i>JOBS</a></li>
+          <li onclick="filterSelection('candidates')"><a href="#tab4"><i class="fa fa-id-badge"></i>CANDIDATES</a></li>
+          <li onclick="filterSelection('boots')"><a href="#tab5"><i class="fa fa-rocket"></i>BOOST</a></li>
+          <li onclick="filterSelection('careers')"><a href="#tab6"><i class="fab fa-black-tie"></i>CAREERS PAGE</a></li>
         </ul>
       </div>
 
@@ -448,19 +448,28 @@
     <section id="pricing">
       <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center text-28">
         <h1 style="font-size:36px;">Pricing</h1>
-        <p class="small-text3 mt-5">Billed Monthly</p>
+
+        <span class="small-text3 mt-5">Billed Monthly</span>
+        <label class="switch">
+          <input type="checkbox" name="chkChangePricing" class="input-checkbox">
+          <span class="slider"></span>
+        </label>
+        <span class="small-text3 mt-5 bill-annually">Billed Annually - <span>2 Months Free</span></span>
       </div>
 
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <div class="card mb-4 box-shadow text-center">
+              <div class="card-header card-nomarl">
+                  <h4 class="my-0 font-weight-normal"><small class="small-text4"></small></h4>
+              </div>
               <div class="card-body h-100">
                   <i><img class="mb mt" src="../assets/images/icons/icon021.png"></i>
                   <p class="small-text">Basic</p>
-                  <h1 class="pricing-card-title"><span class="currency-symbol"></span>50</h1>
+                  <h1 class="pricing-card-title"><span class="currency-symbol"></span><span class="currency-value"></span></h1>
                   <ul class="list-unstyled mt-3 mb-4">
-                      <li class="text-bold">per month</li>
+                      <li class="text-bold currency-interval">per month</li>
                   </ul>
                   <p class="mb-4">1 Job Per Month</p>
                   <button class="btn button-32675 mb-4">Get Started</button>
@@ -475,9 +484,9 @@
               <div class="card-body h-100">
                   <i><img class="mb-1" style="margin-top:-6px;" src="../assets/images/icons/icon022.png"></i>
                   <p class="small-text">Regular</p>
-                  <h1 class="pricing-card-title" style="color:rgb(70, 173, 38);"><span class="currency-symbol"></span>100</h1>
+                  <h1 class="pricing-card-title" style="color:rgb(70, 173, 38);"><span class="currency-symbol"></span><span class="currency-value"></span></h1>
                   <ul class="list-unstyled mt-3 mb-4">
-                    <li class="text-bold">per month</li>
+                    <li class="text-bold currency-interval">per month</li>
                   </ul>
                   <p class="mb-4">3 Job Per Month</p>
                   <button class="btn button-32675 button-32679 mb-4">Get Started</button>
@@ -486,17 +495,20 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 box-shadow text-center">
-            <div class="card-body h-100">
-              <i><img class="mb mt" src="../assets/images/icons/icon023.png"></i>
-              <p class="small-text">Premium</p>
-              <h1 class="pricing-card-title"><span class="currency-symbol"></span>300</h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li class="text-bold">per month</li>
-              </ul>
-              <p class="mb-4">10 Job Per Month</p>
-              <button class="btn button-32675 mb-4">Get Started</button>
+              <div class="card-header card-nomarl">
+                  <h4 class="my-0 font-weight-normal"><small class="small-text4"></small></h4>
+              </div>
+              <div class="card-body h-100">
+                <i><img class="mb mt" src="../assets/images/icons/icon023.png"></i>
+                <p class="small-text">Premium</p>
+                <h1 class="pricing-card-title"><span class="currency-symbol"></span><span class="currency-value"></span></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li class="text-bold currency-interval">per month</li>
+                </ul>
+                <p class="mb-4">10 Job Per Month</p>
+                <button class="btn button-32675 mb-4">Get Started</button>
+              </div>
             </div>
-          </div>
           </div>
 
         </div>
@@ -891,6 +903,10 @@
         </div>
     </footer>
     <script type="text/javascript">
+    var dataCurrency = [];
+    var currencySymbol = document.getElementsByClassName('currency-symbol');
+    var currencyValue = document.getElementsByClassName('currency-value');
+    var currencyInterval = document.getElementsByClassName('currency-interval');
     $(function(){
       if (window.location.href.indexOf('file:///Users/admin/Desktop/work/Talent-ninja-markup/Pages/hompage.html') > -1){
         const Http = new XMLHttpRequest();
@@ -899,10 +915,30 @@
         Http.send();
         Http.onreadystatechange=(e)=>{
           var dataJson = JSON.parse(Http.responseText)
-          var currencyElement = document.getElementsByClassName('currency-symbol');
-          for (var i = 0; i < currencyElement.length; i++) {
-            currencyElement[i].innerHTML = dataJson[0].currencySymbol;
+          dataCurrency = dataJson;
+          for (var i = 0; i < 3; i++) {
+            currencySymbol[i].innerHTML = dataJson[0].currencySymbol;
+            currencyValue[i].innerHTML = dataJson[i].pricing;
           }
+        }
+      }
+    });
+    $(document).on("click", "input[name='chkChangePricing']", function () {
+      var btnCheck = document.getElementsByClassName('input-checkbox')[0].checked;
+      var billAnnuallyEle = document.getElementsByClassName('bill-annually');
+      if (btnCheck) {
+        billAnnuallyEle[0].classList.add('bill-annually-active');
+        for (var i = 3; i < 6; i++) {
+          currencySymbol[i-3].innerHTML = dataCurrency[0].currencySymbol;
+          currencyValue[i-3].innerHTML = dataCurrency[i].pricing;
+          currencyInterval[i-3].innerHTML = 'per year';
+        }
+      } else {
+        billAnnuallyEle[0].classList.remove('bill-annually-active');
+        for (var i = 0; i < 3; i++) {
+          currencySymbol[i].innerHTML = dataCurrency[0].currencySymbol;
+          currencyValue[i].innerHTML = dataCurrency[i].pricing;
+          currencyInterval[i].innerHTML = 'per month'
         }
       }
     });
@@ -940,6 +976,7 @@
       var candidates = document.getElementsByClassName('candidates');
       var boots = document.getElementsByClassName('boots');
       var careers = document.getElementsByClassName('careers');
+      var tabItems = document.getElementById('tab-wrapper').children;
       switch (itemSelected) {
         case 'signup':
           signup[0].classList.add('show');
@@ -948,6 +985,12 @@
           candidates[0].classList.remove('show');
           boots[0].classList.remove('show');
           careers[0].classList.remove('show');
+          tabItems[0].classList.add('active');
+          tabItems[1].classList.remove('active');
+          tabItems[2].classList.remove('active');
+          tabItems[3].classList.remove('active');
+          tabItems[4].classList.remove('active');
+          tabItems[5].classList.remove('active');
           break;
         case 'dashboard':
           signup[0].classList.remove('show');
@@ -956,6 +999,12 @@
           candidates[0].classList.remove('show');
           boots[0].classList.remove('show');
           careers[0].classList.remove('show');
+          tabItems[0].classList.remove('active');
+          tabItems[1].classList.add('active');
+          tabItems[2].classList.remove('active');
+          tabItems[3].classList.remove('active');
+          tabItems[4].classList.remove('active');
+          tabItems[5].classList.remove('active');
           break;
         case 'jobs':
           signup[0].classList.remove('show');
@@ -964,6 +1013,12 @@
           candidates[0].classList.remove('show');
           boots[0].classList.remove('show');
           careers[0].classList.remove('show');
+          tabItems[0].classList.remove('active');
+          tabItems[1].classList.remove('active');
+          tabItems[2].classList.add('active');
+          tabItems[3].classList.remove('active');
+          tabItems[4].classList.remove('active');
+          tabItems[5].classList.remove('active');
           break;
         case 'candidates':
           signup[0].classList.remove('show');
@@ -972,6 +1027,12 @@
           candidates[0].classList.add('show');
           boots[0].classList.remove('show');
           careers[0].classList.remove('show');
+          tabItems[0].classList.remove('active');
+          tabItems[1].classList.remove('active');
+          tabItems[2].classList.remove('active');
+          tabItems[3].classList.add('active');
+          tabItems[4].classList.remove('active');
+          tabItems[5].classList.remove('active');
           break;
         case 'boots':
           signup[0].classList.remove('show');
@@ -980,6 +1041,12 @@
           candidates[0].classList.remove('show');
           boots[0].classList.add('show');
           careers[0].classList.remove('show');
+          tabItems[0].classList.remove('active');
+          tabItems[1].classList.remove('active');
+          tabItems[2].classList.remove('active');
+          tabItems[3].classList.remove('active');
+          tabItems[4].classList.add('active');
+          tabItems[5].classList.remove('active');
           break;
         case 'careers':
           signup[0].classList.remove('show');
@@ -988,6 +1055,12 @@
           candidates[0].classList.remove('show');
           boots[0].classList.remove('show');
           careers[0].classList.add('show');
+          tabItems[0].classList.remove('active');
+          tabItems[1].classList.remove('active');
+          tabItems[2].classList.remove('active');
+          tabItems[3].classList.remove('active');
+          tabItems[4].classList.remove('active');
+          tabItems[5].classList.add('active');
           break;
         default:
 
