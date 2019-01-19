@@ -91,10 +91,10 @@
 /* Fix the circle for containers on the right side */
 .right::after {
   left: -16px;
-  border: 4px solid green;
+  border: 4px solid rgba(70,173,38,1);
 }
 .left::after {
-  border: 4px solid green;
+  border: 4px solid rgba(70,173,38,1);
 }
 /* The actual content */
 .content_timeline {
