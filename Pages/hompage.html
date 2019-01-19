@@ -458,7 +458,7 @@
               <div class="card-body h-100">
                   <i><img class="mb mt" src="../assets/images/icons/icon021.png"></i>
                   <p class="small-text">Basic</p>
-                  <h1 class="pricing-card-title">£50</h1>
+                  <h1 class="pricing-card-title"><span class="currency-symbol"></span>50</h1>
                   <ul class="list-unstyled mt-3 mb-4">
                       <li class="text-bold">per month</li>
                   </ul>
@@ -475,7 +475,7 @@
               <div class="card-body h-100">
                   <i><img class="mb-1" style="margin-top:-6px;" src="../assets/images/icons/icon022.png"></i>
                   <p class="small-text">Regular</p>
-                  <h1 class="pricing-card-title" style="color:rgb(70, 173, 38);">£100</h1>
+                  <h1 class="pricing-card-title" style="color:rgb(70, 173, 38);"><span class="currency-symbol"></span>100</h1>
                   <ul class="list-unstyled mt-3 mb-4">
                     <li class="text-bold">per month</li>
                   </ul>
@@ -489,7 +489,7 @@
             <div class="card-body h-100">
               <i><img class="mb mt" src="../assets/images/icons/icon023.png"></i>
               <p class="small-text">Premium</p>
-              <h1 class="pricing-card-title">£300</h1>
+              <h1 class="pricing-card-title"><span class="currency-symbol"></span>300</h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li class="text-bold">per month</li>
               </ul>
@@ -891,6 +891,21 @@
         </div>
     </footer>
     <script type="text/javascript">
+    $(function(){
+      if (window.location.href.indexOf('file:///Users/admin/Desktop/work/Talent-ninja-markup/Pages/hompage.html') > -1){
+        const Http = new XMLHttpRequest();
+        const url='https://api.talent-ninja.com/plans';
+        Http.open("GET", url);
+        Http.send();
+        Http.onreadystatechange=(e)=>{
+          var dataJson = JSON.parse(Http.responseText)
+          var currencyElement = document.getElementsByClassName('currency-symbol');
+          for (var i = 0; i < currencyElement.length; i++) {
+            currencyElement[i].innerHTML = dataJson[0].currencySymbol;
+          }
+        }
+      }
+    });
     // Modal Term of Service
     var modalTermOfService = document.getElementById('modalTermOfService');
     var btnTermOfService = document.getElementById("btnTermOfService");
