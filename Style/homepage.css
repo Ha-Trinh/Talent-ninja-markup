@@ -99,19 +99,23 @@ a {
 .title {
   font-size: 54px;
   font-weight: 700;
-  font-family: "Proxima Noba B", sans-serif;
+  font-family: "Proxima Nova Bold", sans-serif !important;;
   font-style: normal;
   color: #161b33;
+}
+.post-job-description {
+  padding-bottom: 40px;
 }
 p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 .started-btn {
+  margin: auto;
   left: 0px;
   border-style: none;
   border-radius: 28px;
-  width: 276px;
+  width: 246px;
   height: 56px;
   background-color: rgba(70, 173, 38, 1);
   text-shadow: none;
@@ -126,6 +130,9 @@ p {
   font-style: normal;
   font-family: ProximaNova-Semibold, Arial,sans-serif;
   position: relative;
+}
+.started-btn:hover {
+  text-decoration: none;
 }
 #boxes {
   display: block;
@@ -391,10 +398,11 @@ img {
 .btn-success {
   padding: 1.5rem !important;
   background-color: rgba(70, 173, 38, 1);
-  width: 276px;
+  width: 246px;
   height: 56px;
   border-radius: 28px;
   font-weight: 700;
+  font-size: 18px;
 }
 .btn-bottom {
   margin-bottom: 60px;
@@ -658,12 +666,28 @@ input:checked + .slider:before {
   align-items: flex-start;
   margin-top: 0;
 }
+#pricing .media {
+  padding-bottom: 10px;
+}
 .lead-text {
   font-family: "Proxima Nova RG", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
   color: rgb(52, 55, 74);
+}
+#pricing .lead-text {
+  padding: 20px 0;
+}
+#testimonials .pricing-header {
+  padding-top: 80px !important;
+}
+#testimonials h6 {
+  color: rgb(70, 173, 38);
+}
+#testimonials .form-row {
+  padding-bottom: 30px;
+  padding-top: 15px;
 }
 img {
   vertical-align: middle;
@@ -676,6 +700,9 @@ section#faqs h5 {
   font-style: normal;
   font-size: 24px;
   color: rgb(52, 55, 74);
+}
+#faqs .media {
+  padding-bottom: 30px;
 }
 footer h5 {
   color: #000;
