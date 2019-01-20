@@ -369,17 +369,17 @@
 
       <div id="myBtnContainer">
         <ul class="container" id="tab-wrapper">
-          <li class="active" onclick="filterSelection('signup')"><a href="#tab1"><i class="fa fa-user"></i>SIGN UP</a></li>
-          <li onclick="filterSelection('dashboard')"><a href="#tab2"><i class="fas fa-cogs"></i>DASHBOARD</a></li>
-          <li onclick="filterSelection('jobs')"><a href="#tab3"><i class="fa fa-briefcase"></i>JOBS</a></li>
-          <li onclick="filterSelection('candidates')"><a href="#tab4"><i class="fa fa-id-badge"></i>CANDIDATES</a></li>
-          <li onclick="filterSelection('boots')"><a href="#tab5"><i class="fa fa-rocket"></i>BOOST</a></li>
-          <li onclick="filterSelection('careers')"><a href="#tab6"><i class="fab fa-black-tie"></i>CAREERS PAGE</a></li>
+          <li class="active tablinks" onclick="openFeatures(event, 'signup')"><a href="#tab1"><i class="fa fa-user"></i>SIGN UP</a></li>
+          <li class="tablinks" onclick="openFeatures(event, 'dashboard')"><a href="#tab2"><i class="fas fa-cogs"></i>DASHBOARD</a></li>
+          <li class="tablinks" onclick="openFeatures(event, 'jobs')"><a href="#tab3"><i class="fa fa-briefcase"></i>JOBS</a></li>
+          <li class="tablinks" onclick="openFeatures(event, 'candidates')"><a href="#tab4"><i class="fa fa-id-badge"></i>CANDIDATES</a></li>
+          <li class="tablinks" onclick="openFeatures(event, 'boots')"><a href="#tab5"><i class="fa fa-rocket"></i>BOOST</a></li>
+          <li class="tablinks" onclick="openFeatures(event, 'careers')"><a href="#tab6"><i class="fab fa-black-tie"></i>CAREERS PAGE</a></li>
         </ul>
       </div>
 
       <div class="container">
-        <div class="filterDiv row signup show">
+        <div class="filterDiv row show tabcontent" id="signup">
           <div class="column col-md-6">
             <img src="../assets/images/features/explore_signup.png">
           </div>
@@ -389,7 +389,7 @@
           </div>
         </div>
 
-        <div class="filterDiv row dashboard row">
+        <div class="filterDiv row row tabcontent" id="dashboard">
           <div class="column col-md-6">
             <img src="../assets/images/features/explore_dashboard.png">
           </div>
@@ -399,7 +399,7 @@
           </div>
         </div>
 
-        <div class="filterDiv row jobs">
+        <div class="filterDiv row tabcontent" id="jobs">
           <div class="column col-md-6">
             <img src="../assets/images/features/explore_jobs.png">
           </div>
@@ -409,7 +409,7 @@
           </div>
         </div>
 
-        <div class="filterDiv row candidates">
+        <div class="filterDiv row tabcontent" id="candidates">
           <div class="column col-md-6">
             <img src="../assets/images/features/explore_candidates.png">
           </div>
@@ -419,7 +419,7 @@
           </div>
         </div>
 
-        <div class="filterDiv row boots">
+        <div class="filterDiv row tabcontent" id="boots">
           <div class="column col-md-6">
             <img src="../assets/images/features/explore_boost.png">
           </div>
@@ -429,7 +429,7 @@
           </div>
         </div>
 
-        <div class="filterDiv row careers">
+        <div class="filterDiv row tabcontent" id="careers">
           <div class="column col-md-6">
             <img src="../assets/images/features/explore_careers.png">
           </div>
@@ -978,102 +978,21 @@
         modalPrivacy.style.display = "none";
       }
     }
-    var filterSelection = function (itemSelected) {
-      var signup = document.getElementsByClassName('signup');
-      var dashboard = document.getElementsByClassName('dashboard');
-      var jobs = document.getElementsByClassName('jobs');
-      var candidates = document.getElementsByClassName('candidates');
-      var boots = document.getElementsByClassName('boots');
-      var careers = document.getElementsByClassName('careers');
-      var tabItems = document.getElementById('tab-wrapper').children;
-      switch (itemSelected) {
-        case 'signup':
-          signup[0].classList.add('show');
-          dashboard[0].classList.remove('show');
-          jobs[0].classList.remove('show');
-          candidates[0].classList.remove('show');
-          boots[0].classList.remove('show');
-          careers[0].classList.remove('show');
-          tabItems[0].classList.add('active');
-          tabItems[1].classList.remove('active');
-          tabItems[2].classList.remove('active');
-          tabItems[3].classList.remove('active');
-          tabItems[4].classList.remove('active');
-          tabItems[5].classList.remove('active');
-          break;
-        case 'dashboard':
-          signup[0].classList.remove('show');
-          dashboard[0].classList.add('show');
-          jobs[0].classList.remove('show');
-          candidates[0].classList.remove('show');
-          boots[0].classList.remove('show');
-          careers[0].classList.remove('show');
-          tabItems[0].classList.remove('active');
-          tabItems[1].classList.add('active');
-          tabItems[2].classList.remove('active');
-          tabItems[3].classList.remove('active');
-          tabItems[4].classList.remove('active');
-          tabItems[5].classList.remove('active');
-          break;
-        case 'jobs':
-          signup[0].classList.remove('show');
-          dashboard[0].classList.remove('show');
-          jobs[0].classList.add('show');
-          candidates[0].classList.remove('show');
-          boots[0].classList.remove('show');
-          careers[0].classList.remove('show');
-          tabItems[0].classList.remove('active');
-          tabItems[1].classList.remove('active');
-          tabItems[2].classList.add('active');
-          tabItems[3].classList.remove('active');
-          tabItems[4].classList.remove('active');
-          tabItems[5].classList.remove('active');
-          break;
-        case 'candidates':
-          signup[0].classList.remove('show');
-          dashboard[0].classList.remove('show');
-          jobs[0].classList.remove('show');
-          candidates[0].classList.add('show');
-          boots[0].classList.remove('show');
-          careers[0].classList.remove('show');
-          tabItems[0].classList.remove('active');
-          tabItems[1].classList.remove('active');
-          tabItems[2].classList.remove('active');
-          tabItems[3].classList.add('active');
-          tabItems[4].classList.remove('active');
-          tabItems[5].classList.remove('active');
-          break;
-        case 'boots':
-          signup[0].classList.remove('show');
-          dashboard[0].classList.remove('show');
-          jobs[0].classList.remove('show');
-          candidates[0].classList.remove('show');
-          boots[0].classList.add('show');
-          careers[0].classList.remove('show');
-          tabItems[0].classList.remove('active');
-          tabItems[1].classList.remove('active');
-          tabItems[2].classList.remove('active');
-          tabItems[3].classList.remove('active');
-          tabItems[4].classList.add('active');
-          tabItems[5].classList.remove('active');
-          break;
-        case 'careers':
-          signup[0].classList.remove('show');
-          dashboard[0].classList.remove('show');
-          jobs[0].classList.remove('show');
-          candidates[0].classList.remove('show');
-          boots[0].classList.remove('show');
-          careers[0].classList.add('show');
-          tabItems[0].classList.remove('active');
-          tabItems[1].classList.remove('active');
-          tabItems[2].classList.remove('active');
-          tabItems[3].classList.remove('active');
-          tabItems[4].classList.remove('active');
-          tabItems[5].classList.add('active');
-          break;
-        default:
 
+    function openFeatures(evt, featuresName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove('show');
+        tabcontent[i].style.display = "none";
       }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove('active');
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(featuresName).style.display = "block";
+      evt.currentTarget.className += " active";
     }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
