@@ -919,18 +919,16 @@
     var currencyValue = document.getElementsByClassName('currency-value');
     var currencyInterval = document.getElementsByClassName('currency-interval');
     $(function(){
-      if (window.location.href.indexOf('file:///Users/admin/Desktop/work/Talent-ninja-markup/Pages/hompage.html') > -1){
-        const Http = new XMLHttpRequest();
-        const url='https://api.talent-ninja.com/plans';
-        Http.open("GET", url);
-        Http.send();
-        Http.onreadystatechange=(e)=>{
-          var dataJson = JSON.parse(Http.responseText)
-          dataCurrency = dataJson;
-          for (var i = 0; i < 3; i++) {
-            currencySymbol[i].innerHTML = dataJson[0].currencySymbol;
-            currencyValue[i].innerHTML = dataJson[i].pricing;
-          }
+      const Http = new XMLHttpRequest();
+      const url='https://api.talent-ninja.com/plans';
+      Http.open("GET", url);
+      Http.send();
+      Http.onreadystatechange=(e)=>{
+        var dataJson = JSON.parse(Http.responseText);
+        dataCurrency = dataJson;
+        for (var i = 0; i < 3; i++) {
+          currencySymbol[i].innerHTML = dataJson[0].currencySymbol;
+          currencyValue[i].innerHTML = dataJson[i].pricing;
         }
       }
     });
