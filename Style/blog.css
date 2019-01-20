@@ -7,8 +7,8 @@
   position: relative;
   background: white;
   margin: auto;
+  padding-top: 30px;
 }
-
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
@@ -20,10 +20,9 @@
   left: 50%;
   margin-left: -3px;
 }
-
 /* Container around content */
 .container_timeline {
-  padding: 10px 40px;
+  padding: 15px 0;
   position: relative;
   background-color: inherit;
   margin: 0;
@@ -44,57 +43,30 @@
   border-radius: 50%;
   z-index: 1;
 }
-.right::before {
-  border-right: 12px solid #131b38 !important;
-}
-.left::before {
-  border-left: 12px solid #131b38 !important;
-}
-/* Place the container to the left */
-.left {
+.container_timeline:nth-child(2n+1) {
   left: -50%;
 }
-
-/* Place the container to the right */
-.right {
+.container_timeline:nth-child(2n+1)::after {
+  border: 4px solid rgba(70,173,38,1);
+}
+.container_timeline:nth-child(2n) {
   left: 51%;
+  padding-left: 20px;
 }
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
+.container_timeline:nth-child(2n)::after {
   left: -16px;
   border: 4px solid rgba(70,173,38,1);
 }
-.left::after {
-  border: 4px solid rgba(70,173,38,1);
+.container_timeline:nth-child(2n) .description{
+  order: 2;
+}
+.container_timeline:nth-child(2n) .timeline-pic{
+  order: 1;
+}
+.description-content {
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
 }
 /* The actual content */
 .content_timeline {
@@ -103,13 +75,14 @@
   position: relative;
   border-radius: 6px;
 }
-.service_title,
-.service_detail {
-  color: rgb(209, 209, 209);
+.timeline-pic {
+  width: 250px;
+  height: 200px;
+  padding: 0;
 }
-.service_title:hover,
-.service_detail:hover {
-  color: white;
+.timeline-pic img {
+  height: 100%;
+  width: 100%;
 }
 
 .pagination {
