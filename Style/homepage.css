@@ -562,6 +562,17 @@ section#pricing .card-body p {
 .card-header:first-child {
   border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 }
+#pricing .currency-interval {
+  font-size: 14px;
+  color: #a7a9b7;
+  margin-top: -10px;
+}
+#pricing .list-unstyled {
+  padding-bottom: 40px;
+}
+#guarantee {
+  padding-top: 25px;
+}
 #box-142 {
   left: 297px;
   top: 4851px;
