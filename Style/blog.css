@@ -64,10 +64,17 @@
 .container_timeline:nth-child(2n) .timeline-pic{
   order: 1;
 }
+.description h5 {
+  color: #8c8e9d;
+  font-weight: bold;
+}
 .description-content {
   width: 250px;
   height: 150px;
   overflow: hidden;
+}
+.description-content p {
+  color: #8c8e9d;
 }
 /* The actual content */
 .content_timeline {
