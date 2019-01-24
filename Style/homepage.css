@@ -1,3 +1,7 @@
+@font-face {
+  font-family: ProximaNovaRegular;
+  src: url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+}
 #header-top {
   display: block;
   margin: 0;
@@ -26,27 +30,23 @@ body {
   line-height: 1.5em;
 }
 h5 {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   font-size: 18px;
   color: rgb(86, 90, 112);
 }
 h1 {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
 }
 .navbar-font {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   font-size: 18px;
   color: #161b33;
 }
 
 a {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 18px;
   color: #007bff;
   text-decoration: none;
@@ -57,10 +57,9 @@ a {
   width: 100%;
   border: 1px solid #aeb1c0;
   color: #161b33;
-  font-family: "Proxima Nova Regular", sans-serif !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 16px;
   line-height: 22px;
-  font-weight: lighter !important;
   max-width: 185px;
   height: 50px;
   border-radius: 40px;
@@ -104,7 +103,7 @@ a {
 .title {
   font-size: 54px;
   font-weight: 700 !important;
-  font-family: "Proxima Nova Regular", sans-serif !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   color: #161b33;
   line-height: 70px !important;
@@ -132,9 +131,8 @@ p {
   -webkit-box-align: center;
   align-items: center;
   font-size: 18px;
-  font-weight: lighter !important;
   font-style: normal;
-  font-family: "Proxima Nova Regular", sans-serif !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   position: relative;
 }
 .started-btn:hover {
@@ -353,8 +351,7 @@ img {
 }
 .text-28 {
   line-height: 43px;
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 36px;
   font-style: normal;
   color: rgb(129, 132, 150);
@@ -384,7 +381,7 @@ img {
   font-size: 18px;
 }
 .card-title {
-  font-family: "Proxima Nova Regular", sans-serif !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-weight: lighter;
   margin-bottom: .75rem;
 }
@@ -394,11 +391,11 @@ img {
 .card-body p {
   line-height: 27px;
   text-align: center;
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
+  font-weight: 400 !important;
   font-style: normal;
   font-size: 18px;
-  color: rgb(140, 142, 157);
+  color: #8c8e9d !important;
 }
 .card-body img {
   margin: 0 0 25px 0;
@@ -432,8 +429,7 @@ section#clients {
   height: 314px;
 }
 .subtitle {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   font-size: 24px;
   color: rgb(52, 55, 74);
@@ -448,8 +444,7 @@ section#features .pricing-header h1 {
 }
 section#features {
   color: #aeb1c0;
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 18px;
 }
 section#features .container {
@@ -458,8 +453,7 @@ section#features .container {
 
 #tab-wrapper {
   color: #AEB1C0;
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 18px;
   padding-bottom: 20px;
   line-height: 30px;
@@ -475,8 +469,7 @@ section#features .container {
   margin: 0 10px;
 }
 #tab-wrapper li.active a {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 18px;
   color: #46AD26;
   border-bottom: 4px solid #46AD26;
@@ -488,8 +481,7 @@ section#features .container {
   line-height: 30px;
   text-decoration: none;
   color: #8C8E9D;
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 18px;
   background-color: #FFFFFF;
 }
@@ -507,11 +499,10 @@ section#features .fa, .fas, .fab {
   float: left;
 }
 .column h2 {
-  font-family: "Proxima Nova Regular", sans-serif !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 24px;
   line-height: 30px;
   color: #46AD26;
-  font-weight: lighter !important;
   margin-top: 70px;
   margin-bottom: 40px;
 }
@@ -519,8 +510,7 @@ section#features .fa, .fas, .fab {
   margin-top: 70px;
 }
 .small-text3 {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   font-size: 14px;
   color: rgb(70, 173, 38);
@@ -532,8 +522,7 @@ section#pricing .card {
   box-shadow: 0px 4px 20px 0 rgba(23 , 42 ,89 , 0.17);
 }
 section#pricing .card-body p {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-size: 18px;
   color: rgb(71, 74, 94);
 }
@@ -551,8 +540,8 @@ section#pricing .card-body p {
   background: white;
 }
 .small-text4 {
-    font-family: "Proxima Nova Regular", sans-serif !important;
-    font-weight: lighter !important;
+    font-family: ProximaNovaRegular, sans-serif !important;
+
     font-style: normal;
     font-size: 14px;
     color: #fff;
@@ -614,8 +603,7 @@ section#pricing .card-body p {
 }
 section#pricing {
   background: #fff;
-  font-weight: lighter !important;
-  font-family: "Proxima Nova Regular", sans-serif !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   color: rgb(129, 132, 150);
 }
@@ -684,8 +672,7 @@ input:checked + .slider:before {
   padding-bottom: 10px;
 }
 .lead-text {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   font-size: 24px;
   color: rgb(52, 55, 74);
@@ -709,8 +696,7 @@ img {
 }
 section#faqs h5 {
   line-height: 31px;
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   font-size: 24px;
   color: rgb(52, 55, 74);
@@ -723,8 +709,7 @@ footer h5 {
   font-weight: bold !important;
 }
 footer a {
-  font-family: "Proxima Nova Regular", sans-serif !important;
-  font-weight: lighter !important;
+  font-family: ProximaNovaRegular, sans-serif !important;
   font-style: normal;
   font-size: 16px;
   line-height: 30px;
