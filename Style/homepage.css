@@ -794,6 +794,13 @@ footer a:hover {
   font-size: 14px;
   font-weight: 700;
 }
+#blue-text {
+  color: #337ab7;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 500;
+}
 /* slider */
 .carousel {
   position: relative;
