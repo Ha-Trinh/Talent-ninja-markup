@@ -1,4 +1,8 @@
-
+/* Please use   Proxima Nova FOR Proxima Nova Regular
+                proxima_nova_scosfthin OR proxima_nova_ltthin FOR Proxima Nova Thin
+                proxima_nova_ltsemibold FOR Proxima Nova Semi-Bold
+                proxima_nova_altbold FOR Proxima Nova Bold
+                proxima_nova_altblack FOR Proxima Nova Black */
 #header-top {
   display: block;
   margin: 0;
@@ -791,25 +795,24 @@ footer a:hover {
   perspective: 1000px;
   backface-visibility: hidden;
   display: none;
-  /* transition: transform .6s ease,-webkit-transform .6s ease; */
 }
 /* .carousel-item-next,
 .carousel-item-prev, */
 .carousel-iten:active {
   display: block;
-  transition: -webkit-transform .6s ease;
-  transition: transform .6s ease;
-  transition: transform .6s ease,-webkit-transform .6s ease;
+  overflow: hidden;
 }
 #carousel-wrapper {
   list-style: none;
   position: relative;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 #carousel-wrapper li img {
-  display: block;
+  width: 100%;
   margin: auto -10px;
+  display: block;
   vertical-align: middle;
   border-style: none;
 }
