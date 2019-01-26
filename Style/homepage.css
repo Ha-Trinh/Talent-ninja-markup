@@ -51,6 +51,8 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 #btn-nav {
+  text-decoration: none;
+  white-space: nowrap;
   margin: auto;
   color: #161b33;
   font-size: 16px;
