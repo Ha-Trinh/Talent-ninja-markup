@@ -472,6 +472,9 @@ section#features .container {
   font-size: 18px;
   background-color: #FFFFFF;
 }
+.tabcontent img {
+  width: 100%;
+}
 section#features .fa, .fas, .fab {
   margin-right: 10px;
 }
