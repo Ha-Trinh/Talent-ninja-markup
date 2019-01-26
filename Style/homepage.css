@@ -90,6 +90,7 @@ a {
 }
 .post-job-content {
   margin-bottom: 20px;
+  padding-left: 0;
 }
 .row {
   display: flex;
@@ -440,7 +441,6 @@ section#features {
 section#features .container {
   overflow: hidden;
 }
-
 #tab-wrapper {
   color: #AEB1C0;
   font-size: 18px;
@@ -667,8 +667,14 @@ input:checked + .slider:before {
 #pricing .lead-text {
   padding: 20px 0;
 }
-#testimonials .pricing-header {
-  padding-top: 80px !important;
+#place .pricing-header,
+#clients .pricing-header,
+#pricing .pricing-header,
+#testimonials .pricing-header,
+#faqs .pricing-header,
+#features .pricing-header,
+#TalentNinja .pricing-header {
+  padding-top: 60px !important;
 }
 #testimonials h6 {
   color: rgb(70, 173, 38);
