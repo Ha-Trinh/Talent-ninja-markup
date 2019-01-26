@@ -806,6 +806,7 @@ footer a:hover {
   position: relative;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 #carousel-wrapper li img {
   display: block;
