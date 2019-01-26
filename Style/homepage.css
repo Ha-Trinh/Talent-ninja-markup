@@ -784,23 +784,6 @@ footer a:hover {
 .carousel {
   position: relative;
 }
-.carousel-item {
-  position: relative;
-  align-items: center;
-  width: 100%;
-  perspective: 1000px;
-  backface-visibility: hidden;
-  display: none;
-  /* transition: transform .6s ease,-webkit-transform .6s ease; */
-}
-/* .carousel-item-next,
-.carousel-item-prev, */
-.carousel-iten:active {
-  display: block;
-  transition: -webkit-transform .6s ease;
-  transition: transform .6s ease;
-  transition: transform .6s ease,-webkit-transform .6s ease;
-}
 #carousel-wrapper {
   list-style: none;
   position: relative;
