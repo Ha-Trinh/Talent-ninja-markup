@@ -27,13 +27,13 @@
       <div class="lp-positioned-content" id="lp-pom-block-8"></div>
       <!-- Header -->
       <div class="container ">
-        <div class="d-flex flex-column flex-md-row align-items-center" id="navbar">
-          <h5 class="my-0 mr-md-auto" href="/"><img src="../assets/logo.png"></h5>
-          <nav class="my-2 my-md-0 mr-md-3 navbar-font">
-            <a class="p-2 text-dark log-in" href="#pricing">Your Pricing</a>
-            <a class="p-2 text-dark pricing" href="#">Log In</a>
-          </nav>
-          <a class="btn lp-button" id="btn-1254" href="#" target="_self"><span>Create An Account</span></a>
+        <div class="row" id="navbar">
+          <h5 class="col-md-8" href="/"><img src="../assets/logo.png"></h5>
+          <div class="navbar-btn-group col-md-2 row">
+            <a class="col-md-6 btn" id="btn-nav" href="#pricing">Your Pricing</a>
+            <a class="col-md-6 btn" id="btn-nav" href="#">Log In</a>
+          </div>
+          <a class="col-md-2 btn lp-button" id="btn-1254" href="#" target="_self"><p>Create An Account</p></a>
         </div>
       </div>
     </section>
@@ -45,12 +45,12 @@
             <!--<h6></h6>-->
             <h1 class="text-md-left title mb-4 mt-5">Post Your Jobs To 300+ Job Sites In Less
                 Than 5 Minutes</h1>
-            <div class="post-job-description">
-              <p class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);"> • &nbsp; &nbsp; Post Jobs To Local, National Niche Sites With 1 Click</p>
-              <p class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">• &nbsp; &nbsp;Attract Local Candidates</p>
-              <p class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">• &nbsp; &nbsp;Advertise Any Vacancy</p>
-              <p class="text-md-left" style="padding: 12px 0; font-size: 18px; color: rgb(129, 132, 150);">• &nbsp; &nbsp;Our "Ninja" Engine Will Guarantee <br> &nbsp; &nbsp; &nbsp;Premium Visibility On The Best Job Sites </p>
-            </div>
+            <ul class="post-job-description">
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Post Jobs To Local, National Niche Sites With 1 Click</li>
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Attract Local Candidates</li>
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Attract Local Candidates</li>
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Our "Ninja" Engine Will Guarantee <br>Premium Visibility On The Best Job Sites</li>
+            </ul>
             <div><a class="btns started-btn mt-4 btn-success" href="#" target="_self">Post Your Jobs</a></div>
           </div>
           <div class="col-md-6 col-sm-12 text-center" id="boxes1">
@@ -1460,12 +1460,14 @@
       const url='https://api.talent-ninja.com/plans';
       Http.open("GET", url);
       Http.send();
-      Http.onreadystatechange=(e)=>{
-        var dataJson = JSON.parse(Http.responseText);
-        dataCurrency = dataJson;
-        for (var i = 0; i < 3; i++) {
-          currencySymbol[i].innerHTML = dataJson[0].currencySymbol;
-          currencyValue[i].innerHTML = dataJson[i].pricing;
+      Http.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+          var dataJson = JSON.parse(Http.responseText);
+          dataCurrency = dataJson;
+          for (var i = 0; i < 3; i++) {
+            currencySymbol[i].innerHTML = dataJson[0].currencySymbol;
+            currencyValue[i].innerHTML = dataJson[i].pricing;
+          }
         }
       }
     });
