@@ -788,15 +788,22 @@ footer a:hover {
   position: relative;
 }
 #carousel-wrapper {
+  width: 100%;
   list-style: none;
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.clients-list li {
+  width: 25%;
+}
+.social-partners-list li {
+  width: 20%;
+}
 #carousel-wrapper li img {
   display: block;
-  margin: auto -10px;
+  margin: auto;
   vertical-align: middle;
   border-style: none;
 }
@@ -819,7 +826,7 @@ footer a:hover {
   cursor: pointer;
   position: absolute;
   top: 20%;
-  right: -5% !important;
+  right: -1% !important;
   width: auto;
   margin-top: -15px;
   padding: 16px;
