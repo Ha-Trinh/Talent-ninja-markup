@@ -27,7 +27,7 @@
 body {
   font-family: 'Proxima Nova', sans-serif;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5em;
 }
 h5 {
@@ -589,13 +589,16 @@ section#pricing .card-body p {
   padding-top: 25px;
 }
 #box-142 {
-  left: 297px;
-  top: 4851px;
   display: block;
   background: rgba(240,254,236,1);
-  width: 576px;
-  height: 153px;
+  width: 50%;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: rgb(39, 141, 8);
+}
+#box-142 img {
+  padding-bottom: 10px;
 }
 .button-32675 {
   border-style: solid;
@@ -694,7 +697,8 @@ input:checked + .slider:before {
   margin-top: 0;
 }
 #pricing .media {
-  padding-bottom: 10px;
+  height: 80px;
+  padding-bottom: 20px;
 }
 .lead-text {
   font-style: normal;
@@ -901,15 +905,25 @@ footer {
   padding-top: 50px !important;
   padding-bottom: 80px;
 }
-@media (max-width: 576px) {
-
-}
 @media (max-width: 766px) {
   #pricing .col-md-4 {
     width: 100% !important;
   }
+  #pricing .media {
+    padding-bottom: 0;
+  }
   #boxes1 {
     display: none;
+  }
+  .faqs-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  #box-142 {
+    width: 100%;
+  }
+  #box-142 .col-md-12 {
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
