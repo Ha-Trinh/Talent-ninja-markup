@@ -897,6 +897,10 @@ footer a:hover {
     outline: 0;
     opacity: .9;
 }
+#Carousel-responsive,
+#Carousel-responsive2 {
+  display: none !important;
+}
 footer {
   font-size: 16px;
   font-weight: 400;
@@ -950,6 +954,24 @@ footer {
     width: 100%;
   }
   #box-142 .col-md-12 {
+    width: 100%;
+  }
+  #Carousel,
+  #Carousel2 {
+    display: none !important;
+  }
+  #Carousel-responsive,
+  #Carousel-responsive2 {
+    display: block !important;
+  }
+  .clients-list li {
+    width: 100% !important;
+  }
+  .social-partners-list li {
+    width: 100% !important;
+  }
+  #block-27 .col-md-12,
+  #clients .col-md-12 {
     width: 100%;
   }
 }
