@@ -4,9 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <title>About</title>
+    <link rel="icon" type="image/png" href="../assets/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="stylesheet" href="../Style/common/normalize.css">
     <!-- Bootstrap -->
     <link href="../Style/common/bootstrap.min.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../Style/blog.css">
     <link rel="stylesheet" type="text/css" href="../Style/homepage.css">
@@ -24,16 +26,18 @@
       <div class="lp-positioned-content" id="lp-pom-block-8"></div>
       <!-- Header -->
       <div class="container ">
-        <div class="d-flex flex-column flex-md-row align-items-center" id="navbar">
-          <h5 class="my-0 mr-md-auto" href="/"><img src="../assets/logo.png"></h5>
-          <nav class="my-2 my-md-0 mr-md-3 navbar-font">
-            <a class="p-2 text-dark log-in" href="#">Your Pricing</a>
-            <a class="p-2 text-dark pricing" href="#">Log In</a>
-          </nav>
-          <a class="btn lp-button" id="btn-1254" href="#" target="_self"><span>Create An Account</span></a>
+        <div class="row" id="navbar">
+          <h5 class="col-md-7" href="/"><img src="../assets/logo.png"></h5>
+          <div class="navbar-btn-group col-md-5 row">
+            <a class="col-md-3" id="btn-nav" href="#pricing">Your Pricing</a>
+            <a class="col-md-2" id="btn-nav" href="https://talent-ninja.com/home/auth/login">Log In</a>
+            <a class="col-md-7 btn lp-button" id="btn-1254" href="https://talent-ninja.com/home/auth/signup" target="_self"><p>Create An Account</p></a>
+          </div>
+
         </div>
       </div>
     </section>
+
 
     <section id="about-us">
       <div class="content">
@@ -62,46 +66,46 @@
     <div class="container"><hr></div>
 
     <footer class="center-on-small-only pt-4 mb-4 my-md-5 pt-md-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <img class="mb-4 logo-footer" src="../assets/logo-footer.png">
-            </div>
-            <div class="col-md-2">
-              <h5 class="mb-2">Links</h5>
-              <ul class="list-unstyled text-small">
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Terms feature</a></li>
-                <li><a href="#">Privacy</a></li>
-              </ul>
-            </div><!--/first column-->
-
-            <!--Second column-->
-            <div class="col-md-2 mx-auto">
-              <h5 class="mb-2">Company</h5>
-              <ul class="list-unstyled text-small">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Carrers</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </div>
-
-              <!--Third column-->
-            <div class="col-md-4 mx-auto">
-              <h5 class="mb-2">Get in Touch</h5>
-              <ul class="list-unstyled text-small">
-                <li><a href="#" class="font-bold" style="color: rgb(140, 142, 157);">Reach out and ask us anything you like!</a></li>
-                <li><a href="#" style="color: rgba(70,173,38,1);"><strong>hello@talent-ninja.com</strong></a></li>
-                <li class="center-block">
-                  <a href="#"><img class="mr-3" src="../assets/facebook.png"></a>
-                  <a href="#"><img class="mr-3" src="../assets/twitter.png"></a>
-                  <a href="#"><img src="../assets/linkedin.png"></a>
-                </li>
-              </ul>
-            </div>
-
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3" style="padding-top: 15px;">
+            <img class="mb-4 logo-footer" src="../assets/logo-footer.png">
           </div>
+          <div class="col-md-2">
+            <h5 class="mb-2">Links</h5>
+            <ul class="list-unstyled text-small">
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a id="btnTermOfService">Terms of Service</a></li>
+              <li><a id="btnPrivacy">Privacy</a></li>
+            </ul>
+          </div><!--/first column-->
+
+          <!--Second column-->
+          <div class="col-md-2 mx-auto">
+            <h5 class="mb-2">Company</h5>
+            <ul class="list-unstyled text-small">
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a href="#">Carrers</a></li>
+              <li><a href="blogs.html">Blog</a></li>
+            </ul>
+          </div>
+
+            <!--Third column-->
+          <div class="col-md-4 mx-auto">
+            <h5 class="mb-2">Get in Touch</h5>
+            <ul class="list-unstyled text-small">
+              <li><a href="#" class="font-bold" style="color: rgb(140, 142, 157);">Reach out and ask us anything you like!</a></li>
+              <li><a href="#" style="color: rgba(70,173,38,1);"><strong>hello@talent-ninja.com</strong></a></li>
+              <li class="center-block">
+                <a href="#"><img class="mr-3" src="../assets/facebook.png"></a>
+                <a href="#"><img class="mr-3" src="../assets/twitter.png"></a>
+                <a href="#"><img src="../assets/linkedin.png"></a>
+              </li>
+            </ul>
+          </div>
+
         </div>
+      </div>
     </footer>
   </body>
 

@@ -4,9 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Talent Ninja | post your jobs to job boards and social media</title>
+    <link rel="icon" type="image/png" href="../assets/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="stylesheet" href="../Style/common/normalize.css">
     <!-- Bootstrap -->
     <link href="../Style/common/bootstrap.min.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- <link href="../Style/common/bootstrap.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../Style/homepage.css">
@@ -26,13 +28,14 @@
       <div class="lp-positioned-content" id="lp-pom-block-8"></div>
       <!-- Header -->
       <div class="container ">
-        <div class="d-flex flex-column flex-md-row align-items-center" id="navbar">
-          <h5 class="my-0 mr-md-auto" href="/"><img src="../assets/logo.png"></h5>
-          <nav class="my-2 my-md-0 mr-md-3 navbar-font">
-            <a class="p-2 text-dark log-in" href="#pricing">Your Pricing</a>
-            <a class="p-2 text-dark pricing" href="#">Log In</a>
-          </nav>
-          <a class="btn lp-button" id="btn-1254" href="#" target="_self"><span>Create An Account</span></a>
+        <div class="row" id="navbar">
+          <h5 class="col-md-7" href="/"><img src="../assets/logo.png"></h5>
+          <div class="navbar-btn-group col-md-5 row">
+            <a class="col-md-3" id="btn-nav" href="#pricing">Your Pricing</a>
+            <a class="col-md-2" id="btn-nav" href="https://talent-ninja.com/home/auth/login">Log In</a>
+            <a class="col-md-7 btn lp-button" id="btn-1254" href="https://talent-ninja.com/home/auth/signup" target="_self"><p>Create An Account</p></a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -40,16 +43,16 @@
     <div id="showcase">
     <div class="container">
       <div class="row hero-content pt-lg-6 pb-lg-6">
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-6 col-sm-12 post-job-content">
             <!--<h6></h6>-->
             <h1 class="text-md-left title mb-4 mt-5">Post Your Jobs To 300+ Job Sites In Less
                 Than 5 Minutes</h1>
-            <div class="post-job-description">
-              <p class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);"> • &nbsp; &nbsp; Post Jobs To Local, National Niche Sites With 1 Click</p>
-              <p class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">• &nbsp; &nbsp;Attract Local Candidates</p>
-              <p class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">• &nbsp; &nbsp;Advertise Any Vacancy</p>
-              <p class="text-md-left" style="padding: 12px 0; font-size: 18px; color: rgb(129, 132, 150);">• &nbsp; &nbsp;Our "Ninja" Engine Will Guarantee <br> &nbsp; &nbsp; &nbsp;Premium Visibility On The Best Job Sites </p>
-            </div>
+            <ul class="post-job-description">
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Post Jobs To Local, National Niche Sites With 1 Click</li>
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Attract Local Candidates</li>
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Attract Local Candidates</li>
+              <li class="text-md-left" style="padding: 12px 0; line-height: 24px; font-size: 18px; color: rgb(129, 132, 150);">Our "Ninja" Engine Will Guarantee <br>Premium Visibility On The Best Job Sites</li>
+            </ul>
             <div><a class="btns started-btn mt-4 btn-success" href="#" target="_self">Post Your Jobs</a></div>
           </div>
           <div class="col-md-6 col-sm-12 text-center" id="boxes1">
@@ -123,25 +126,23 @@
                   <div id="Carousel" class="carousel slide">
                       <!-- Carousel Items -->
                       <div class="carousel-inner">
-                          <div class="sp carousel-item active">
-                              <ul class="container row size" id="carousel-wrapper">
+                          <div class="sp item active">
+                              <ul class="container row size social-partners-list" id="carousel-wrapper">
                                   <li> <img src="../assets/images/image294.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/linkedin.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/glassdoor.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/image298.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/facebook.png" alt="Image" style="max-width:100%;"></li>
-                                  <li> <img src="../assets/images/image300.png" alt="Image" style="max-width:100%;"></li>
                               </ul> <!--row-->
                           </div> <!--item-->
 
-                          <div class="sp carousel-item">
-                              <ul class="container row size" id="carousel-wrapper">
+                          <div class="sp item">
+                              <ul class="container row size social-partners-list" id="carousel-wrapper">
                                   <li> <img src="../assets/images/image300.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/facebook.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/image298.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/image294.png" alt="Image" style="max-width:100%;"></li>
                                   <li> <img src="../assets/images/glassdoor.png" alt="Image" style="max-width:100%;"></li>
-                                  <li> <img src="../assets/images/linkedin.png" alt="Image" style="max-width:100%;"></li>
                               </ul> <!--row-->
                           </div> <!--item-->
                       </div><!--Carousel - inner-->
@@ -282,24 +283,21 @@
                   <div id="Carousel2" class="carousel slide">
                       <!-- Carousel Items -->
                       <div class="carousel-inner">
-                        <div class="sp carousel-item active">
-                          <ul class="container row size" id="carousel-wrapper">
+                        <div class="sp item active">
+                          <ul class="container row size clients-list" id="carousel-wrapper">
                             <li> <img src="../assets/images/clients/springboard.original.png" alt="Image" style="max-width:100%;"></li>
                             <li> <img src="../assets/images/clients/archer.original.png" alt="Image" style="max-width:100%;"></li>
                             <li> <img src="../assets/images/clients/major-drilling.original.png" alt="Image" style="max-width:100%;"></li>
                             <li> <img src="../assets/images/clients/taxify.original.png" alt="Image" style="max-width:100%;"></li>
-                            <li> <img src="../assets/images/clients/hoyt.original.png" alt="Image" style="max-width:100%;"></li>
                           </ul> <!--row-->
                         </div> <!--item-->
 
-                        <div class="sp carousel-item">
-                          <ul class="container row size" id="carousel-wrapper">
-                            <li> <img src="../assets/images/image300.png" alt="Image" style="max-width:100%;"></li>
-                            <li> <img src="../assets/images/facebook.png" alt="Image" style="max-width:100%;"></li>
-                            <li> <img src="../assets/images/image298.png" alt="Image" style="max-width:100%;"></li>
-                            <li> <img src="../assets/images/image294.png" alt="Image" style="max-width:100%;"></li>
-                            <li> <img src="../assets/images/glassdoor.png" alt="Image" style="max-width:100%;"></li>
-                            <li> <img src="../assets/images/linkedin.png" alt="Image" style="max-width:100%;"></li>
+                        <div class="sp item">
+                          <ul class="container row size clients-list" id="carousel-wrapper">
+                            <li> <img src="../assets/images/clients/nobly.original.png" alt="Image" style="max-width:100%;"></li>
+                            <li> <img src="../assets/images/clients/fish.original.png" alt="Image" style="max-width:100%;"></li>
+                            <li> <img src="../assets/images/clients/premier-oil.original.png" alt="Image" style="max-width:100%;"></li>
+                            <li> <img src="../assets/images/clients/hewlett-packard.original.png" alt="Image" style="max-width:100%;"></li>
                           </ul> <!--row-->
                       </div> <!--item-->
                     </div><!--Carousel - inner-->
@@ -381,7 +379,7 @@
 
       <div class="container">
         <div class="filterDiv row show tabcontent" id="signup">
-          <div class="column col-md-6">
+          <div class="col-md-6">
             <img src="../assets/images/features/explore_signup.png">
           </div>
           <div class="column col-md-6">
@@ -391,7 +389,7 @@
         </div>
 
         <div class="filterDiv row row tabcontent" id="dashboard">
-          <div class="column col-md-6">
+          <div class="col-md-6">
             <img src="../assets/images/features/explore_dashboard.png">
           </div>
           <div class="column col-md-6">
@@ -401,7 +399,7 @@
         </div>
 
         <div class="filterDiv row tabcontent" id="jobs">
-          <div class="column col-md-6">
+          <div class="col-md-6">
             <img src="../assets/images/features/explore_jobs.png">
           </div>
           <div class="column col-md-6">
@@ -411,7 +409,7 @@
         </div>
 
         <div class="filterDiv row tabcontent" id="candidates">
-          <div class="column col-md-6">
+          <div class="col-md-6">
             <img src="../assets/images/features/explore_candidates.png">
           </div>
           <div class="column col-md-6">
@@ -421,7 +419,7 @@
         </div>
 
         <div class="filterDiv row tabcontent" id="boots">
-          <div class="column col-md-6">
+          <div class="col-md-6">
             <img src="../assets/images/features/explore_boost.png">
           </div>
           <div class="column col-md-6">
@@ -431,7 +429,7 @@
         </div>
 
         <div class="filterDiv row tabcontent" id="careers">
-          <div class="column col-md-6">
+          <div class="col-md-6">
             <img src="../assets/images/features/explore_careers.png">
           </div>
           <div class="column col-md-6">
@@ -463,7 +461,7 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 my-4" style="padding-bottom: 20px;">
             <div class="card mb-4 box-shadow text-center">
               <div class="card-header card-nomarl">
                   <h4 class="my-0 font-weight-normal"><small class="small-text4"></small></h4>
@@ -480,7 +478,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 my-4" style="padding-bottom: 20px;">
             <div class="card mb-4 box-shadow text-center">
               <div class="card-header">
                   <h4 class="my-0 font-weight-normal"><small class="small-text4">Most Popular</small></h4>
@@ -497,7 +495,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 my-4" style="padding-bottom: 20px;">
             <div class="card mb-4 box-shadow text-center">
               <div class="card-header card-nomarl">
                   <h4 class="my-0 font-weight-normal"><small class="small-text4"></small></h4>
@@ -535,65 +533,65 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-md-4 media-group">
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="media">
-                  <h5 class="mt-0">Post To 300+ Job Boards With <br> a Single Click</h5>
+                <div>
+                  <h5 class="mt-0">Post To 300+ Job Boards With a Single Click</h5>
                 </div>
               </div>
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="media-body">
-                  <h5 class="mt-0">Post To LinkedIn, <br> Twitter and Facebook</h5>
+                <div>
+                  <h5 class="mt-0">Post To LinkedIn, Twitter and Facebook</h5>
                 </div>
               </div>
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="media">
+                <div>
                   <h5 class="mt-0">Fully Responsive Job Adverts</h5>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 media-group">
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="media">
-                  <h5 class="mt-0">Premium Job Boards Boost</h5><br><br>
+                <div>
+                  <h5 class="mt-0">Premium Job Boards Boost</h5>
                 </div>
               </div>
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="media">
-                  <h5 class="mt-0">Social Media Boost</h5><br><br>
+                <div>
+                  <h5 class="mt-0">Social Media Boost</h5>
                 </div>
               </div>
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="media">
+                <div>
                   <h5 class="mt-0">Performance Analytics</h5>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 media-group">
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="">
-                  <h5 class="mt-0">Video Cover Letters</h5><br>
+                <div>
+                  <h5 class="mt-0">Video Cover Letters</h5>
                 </div>
               </div>
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="">
-                  <h5 class="mt-0">Multiple Job Templates</h5><br>
+                <div>
+                  <h5 class="mt-0">Multiple Job Templates</h5>
                 </div>
               </div>
               <div class="media">
                 <img class="mr-3" src="../assets/images/icons/icon20.png">
-                <div class="">
-                  <h5 class="mt-0" style="margin-bottom: 40px;">Branded Careers Page</h5><br>
+                <div>
+                  <h5 class="mt-0" >Branded Careers Page</h5>
                 </div>
               </div>
             </div>
@@ -748,9 +746,9 @@
             <div class="col-md-2 mx-auto">
               <h5 class="mb-2">Company</h5>
               <ul class="list-unstyled text-small">
-                <li><a href="file:///Users/admin/Desktop/work/Talent-ninja-markup/Pages/aboutUs.html">About Us</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
                 <li><a href="#">Carrers</a></li>
-                <li><a href="file:///Users/admin/Desktop/work/Talent-ninja-markup/Pages/blogs.html">Blog</a></li>
+                <li><a href="blogs.html">Blog</a></li>
               </ul>
             </div>
 
@@ -1464,12 +1462,14 @@
       const url='https://api.talent-ninja.com/plans';
       Http.open("GET", url);
       Http.send();
-      Http.onreadystatechange=(e)=>{
-        var dataJson = JSON.parse(Http.responseText);
-        dataCurrency = dataJson;
-        for (var i = 0; i < 3; i++) {
-          currencySymbol[i].innerHTML = dataJson[0].currencySymbol;
-          currencyValue[i].innerHTML = dataJson[i].pricing;
+      Http.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+          var dataJson = JSON.parse(Http.responseText);
+          dataCurrency = dataJson;
+          for (var i = 0; i < 3; i++) {
+            currencySymbol[i].innerHTML = dataJson[0].currencySymbol;
+            currencyValue[i].innerHTML = dataJson[i].pricing;
+          }
         }
       }
     });
@@ -1537,7 +1537,7 @@
     }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   </body>
