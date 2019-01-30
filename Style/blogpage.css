@@ -11,8 +11,11 @@ footer img {
   padding-top: 50px;
   color: #716f73;
 }
+.banner {
+  text-align: center;
+}
 .banner img {
-  width: 100%;
+  max-width: 100%;
 }
 .title h2 {
   color: #03ac34;
