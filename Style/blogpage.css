@@ -11,6 +11,9 @@ footer img {
   padding-top: 50px;
   color: #716f73;
 }
+#blog-content img {
+  max-width: 100%;
+}
 .banner {
   text-align: center;
 }

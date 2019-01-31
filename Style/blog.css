@@ -100,7 +100,7 @@
 
 .pagination a {
   color: black;
-  padding: 8px 16px;
+  padding: 8px 10px;
   text-decoration: none;
 }
 
@@ -110,3 +110,28 @@
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+@media screen and (max-width: 991px) {
+  .timeline::after {
+    display: none;
+  }
+  .container_timeline {
+    left: 0 !important;
+    padding-left: 0 !important;
+  }
+  .container_timeline .timeline-pic {
+    margin: auto;
+  }
+  .container_timeline .description {
+    margin: auto;
+  }
+  .container_timeline::after {
+    display: none;
+  }
+  .container_timeline .description{
+    order: 2;
+  }
+  .container_timeline .timeline-pic{
+    order: 1;
+  }
+}
