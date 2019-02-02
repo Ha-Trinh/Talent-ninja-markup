@@ -12,13 +12,13 @@ footer img {
   color: #716f73;
 }
 #blog-content img {
-  max-width: 100%;
+  width: 100%;
 }
 .banner {
   text-align: center;
 }
 .banner img {
-  max-width: 100%;
+  width: 100%;
 }
 .title h2 {
   color: #03ac34;
